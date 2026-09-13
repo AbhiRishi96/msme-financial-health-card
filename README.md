@@ -4,9 +4,26 @@ A notebook-first, explainable assessment of synthetic MSME financial data. Seven
 
 **Live demo:** [cars24-msme-financial-health.streamlit.app](https://cars24-msme-financial-health.streamlit.app/)
 
+**Submission report:** [Download the evaluator report](submission/MSME_Financial_Health_Card_Submission_Report.docx)
+
 **This is an interview demonstration.** Labels are synthetic; there are no observed defaults, dated transaction histories, or anomaly labels. Results do not establish real underwriting accuracy or fairness. No external financial systems are connected.
 
 ![Working dashboard](reports/dashboard_portfolio.png)
+
+## Evaluator quick start
+
+| Evaluation criterion | Weight | Direct evidence |
+|---|---:|---|
+| Problem Understanding | 10% | [Submission report](submission/MSME_Financial_Health_Card_Submission_Report.docx), [production boundary](ARCHITECTURE.md#boundaries) |
+| Data Engineering & Feature Design | 15% | [Executed EDA notebook](data_analysis.ipynb), [shared feature logic](scoring.py), [quality reports](data_quality_reports) |
+| AI/ML Model Quality | 20% | [Executed modeling notebook](modeling.ipynb), [test metrics](reports/test_metrics.json), [subgroup metrics](reports/subgroup_metrics.csv) |
+| Explainability & Interpretability | 10% | [Shared SHAP inference](scoring.py), [behavior tests](tests/test_workflow.py), live app **Why this result?** view |
+| Financial Health Card Design | 15% | [Live Health Card](https://cars24-msme-financial-health.streamlit.app/), [printable example](examples/health_card.html) |
+| Dashboard & User Experience | 10% | [Live portfolio and card workflow](https://cars24-msme-financial-health.streamlit.app/), [dashboard source](dashboard.py) |
+| Scalability & System Architecture | 10% | [Architecture](ARCHITECTURE.md), [workflow image](reports/architecture_workflow.png), [API contract](openapi.json) |
+| Innovation & Practicality | 10% | [Eligibility/limit separation and anomaly review](modeling.ipynb), [versioned REST workflow](API.md) |
+
+The [submission package index](submission/README.md) gives the recommended review order and the exact files to submit.
 
 ## Run locally
 
@@ -75,7 +92,7 @@ Only load trusted model artifacts: joblib deserialization can execute code.
 
 Evaluated on 7,500 held-out synthetic businesses. Overall health MAE **1.76 points**, R² **0.879**. Six component-score MAEs range from **0.23 to 0.33 points**. Eligibility macro-F1 **0.902**, ROC-AUC **0.979**; risk macro-F1 **0.838**.
 
-Positive-limit MAE **₹143,697**; complete eligibility-plus-limit MAE **₹149,944**. Anomaly review rate **2.12%**. Warm scoring median **18.2 ms**, p95 **19.0 ms**, excluding explanations; cold first explanation **576 ms**, subsequent measured examples **54–58 ms** on this Mac. Timings are samples, not a production SLA.
+Positive-limit MAE **₹143,697**; complete eligibility-plus-limit MAE **₹149,944**. Anomaly review rate **2.12%**. The latest warm scoring sample measured **21.3 ms** at p50 and **25.9 ms** at p95, excluding explanations; measured explanation examples took **57–65 ms** on this Mac. Timings are samples, not a production SLA.
 
 Selected: compact CatBoost for scores; compact logistic regression for eligibility/risk; full-feature CatBoost for positive limits. Larger-business limit errors are substantially higher; see subgroup report. No test-driven tuning followed evaluation.
 
