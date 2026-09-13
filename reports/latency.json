@@ -1,20 +1,20 @@
 {
-  "warm_scoring_p50_ms": 18.90649950291845,
-  "warm_scoring_p95_ms": 19.20373959837889,
+  "warm_scoring_p50_ms": 20.075521009857766,
+  "warm_scoring_p95_ms": 21.22468095185468,
   "explanation_cases": [
     {
       "segment": "NTC",
-      "explanation_seconds": 0.4752890829986427,
+      "explanation_seconds": 0.47712429201055784,
       "health_reconstruction_error": 2.842170943040401e-14
     },
     {
       "segment": "NTB",
-      "explanation_seconds": 0.056113082995580044,
+      "explanation_seconds": 0.05694687500363216,
       "health_reconstruction_error": 0.0
     },
     {
       "segment": "Existing-to-Credit",
-      "explanation_seconds": 0.055433374996937346,
+      "explanation_seconds": 0.05671183300728444,
       "health_reconstruction_error": 0.0
     }
   ],
