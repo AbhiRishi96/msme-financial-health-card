@@ -2,11 +2,13 @@
 
 A notebook-first, explainable assessment of synthetic MSME financial data. Seven financial scores, credit eligibility, risk category, indicative credit limit, anomaly review, and a working dashboard/API.
 
-**This is a local demonstration.** Labels are synthetic; there are no observed defaults, dated transaction histories, or anomaly labels. Results do not establish real underwriting accuracy or fairness. No external financial systems are connected.
+**Live demo:** [cars24-msme-financial-health.streamlit.app](https://cars24-msme-financial-health.streamlit.app/)
+
+**This is an interview demonstration.** Labels are synthetic; there are no observed defaults, dated transaction histories, or anomaly labels. Results do not establish real underwriting accuracy or fairness. No external financial systems are connected.
 
 ![Working dashboard](reports/dashboard_portfolio.png)
 
-## Run the submitted demo
+## Run locally
 
 Trained artifacts and six demonstration scenarios are included. The supplied dataset is not needed to run the demo.
 
@@ -94,8 +96,6 @@ Selected: compact CatBoost for scores; compact logistic regression for eligibili
 
 Real deployment needs authorized source access, reporting-period alignment, consent lifecycle, security controls, tenant isolation, audit/retention policy, observed-outcome validation, calibration, fairness evaluation, monitoring, and approved lending policy. [Architecture](ARCHITECTURE.md) describes the integration and scaling route. A free hosted interview-demo entrypoint is available; see [deployment instructions](cloud/DEPLOY.md).
 
-## Free hosted demo
-
-**Live app:** [cars24-msme-financial-health.streamlit.app](https://cars24-msme-financial-health.streamlit.app/)
+## Deployment notes
 
 The deployment uses `cloud/streamlit_app.py` and Python 3.14. The hosted demo uses the same API routes in-process and isolates each visitor in a temporary workspace. See the [deployment notes](cloud/DEPLOY.md). The local REST workflow above remains available.
