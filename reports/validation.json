@@ -1,0 +1,192 @@
+{
+  "candidates": [
+    {
+      "task": "scores",
+      "family": "linear",
+      "features": "full",
+      "metric": 0.5430607280874071,
+      "per_score": [
+        1.854303382866641,
+        0.028690956733791823,
+        0.032044973625472026,
+        0.028044512114548524,
+        0.053309654040139424,
+        0.029842037947953756,
+        1.7751895792833037
+      ]
+    },
+    {
+      "task": "eligibility",
+      "family": "linear",
+      "features": "full",
+      "metric": 0.9042325720693426
+    },
+    {
+      "task": "risk",
+      "family": "linear",
+      "features": "full",
+      "metric": 0.8396756045118892
+    },
+    {
+      "task": "limit",
+      "family": "linear",
+      "features": "full",
+      "metric": 163208.90523109317
+    },
+    {
+      "task": "scores",
+      "family": "catboost",
+      "features": "full",
+      "metric": 0.47994874304011426,
+      "per_score": [
+        0.2487678137349212,
+        0.28280220887033464,
+        0.23829607808536288,
+        0.23856413115877095,
+        0.3222477032497639,
+        0.24800704577084798,
+        1.7809562204107983
+      ]
+    },
+    {
+      "task": "eligibility",
+      "family": "catboost",
+      "features": "full",
+      "metric": 0.9017412725816502
+    },
+    {
+      "task": "risk",
+      "family": "catboost",
+      "features": "full",
+      "metric": 0.8411666098370576
+    },
+    {
+      "task": "limit",
+      "family": "catboost",
+      "features": "full",
+      "metric": 141422.84081330957
+    },
+    {
+      "task": "scores",
+      "family": "linear",
+      "features": "compact",
+      "metric": 0.5430674376942239,
+      "per_score": [
+        1.8543676737193797,
+        0.02868827178596745,
+        0.032044934793286434,
+        0.02804556473768082,
+        0.053310519567561034,
+        0.02984078703178418,
+        1.7751743122239085
+      ]
+    },
+    {
+      "task": "eligibility",
+      "family": "linear",
+      "features": "compact",
+      "metric": 0.904264835631658
+    },
+    {
+      "task": "risk",
+      "family": "linear",
+      "features": "compact",
+      "metric": 0.8389348177134915
+    },
+    {
+      "task": "limit",
+      "family": "linear",
+      "features": "compact",
+      "metric": 173179.75549772143
+    },
+    {
+      "task": "scores",
+      "family": "catboost",
+      "features": "compact",
+      "metric": 0.4801314898914534,
+      "per_score": [
+        0.25001340999294525,
+        0.2768646074334754,
+        0.25606202465323047,
+        0.23371676435421598,
+        0.32995355174729446,
+        0.2365107294537227,
+        1.7777993416052893
+      ]
+    },
+    {
+      "task": "eligibility",
+      "family": "catboost",
+      "features": "compact",
+      "metric": 0.9004723118206706
+    },
+    {
+      "task": "risk",
+      "family": "catboost",
+      "features": "compact",
+      "metric": 0.8394102114986605
+    },
+    {
+      "task": "limit",
+      "family": "catboost",
+      "features": "compact",
+      "metric": 157208.34730988697
+    }
+  ],
+  "selected": {
+    "scores": {
+      "family": "catboost",
+      "features": "compact",
+      "validation": {
+        "task": "scores",
+        "family": "catboost",
+        "features": "compact",
+        "metric": 0.4801314898914534,
+        "per_score": [
+          0.25001340999294525,
+          0.2768646074334754,
+          0.25606202465323047,
+          0.23371676435421598,
+          0.32995355174729446,
+          0.2365107294537227,
+          1.7777993416052893
+        ]
+      }
+    },
+    "eligibility": {
+      "family": "linear",
+      "features": "compact",
+      "validation": {
+        "task": "eligibility",
+        "family": "linear",
+        "features": "compact",
+        "metric": 0.904264835631658
+      }
+    },
+    "risk": {
+      "family": "linear",
+      "features": "compact",
+      "validation": {
+        "task": "risk",
+        "family": "linear",
+        "features": "compact",
+        "metric": 0.8389348177134915
+      }
+    },
+    "limit": {
+      "family": "catboost",
+      "features": "full",
+      "validation": {
+        "task": "limit",
+        "family": "catboost",
+        "features": "full",
+        "metric": 141422.84081330957
+      }
+    }
+  },
+  "dummy": {
+    "scores_mae": 6.232689472761905,
+    "eligibility_macro_f1": 0.42638623326959846,
+    "risk_macro_f1": 0.205539672292416
+  }
+}

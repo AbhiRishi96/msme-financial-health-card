@@ -1,0 +1,64 @@
+{
+  "pytest": {
+    "tests": "16",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "3.560"
+  },
+  "notebooks": {
+    "data_analysis.ipynb": {
+      "code_cells": 7,
+      "all_executed": true,
+      "errors": 0
+    },
+    "modeling.ipynb": {
+      "code_cells": 5,
+      "all_executed": true,
+      "errors": 0
+    }
+  },
+  "ui": {
+    "initial_load": true,
+    "ntc_filter_count": 2,
+    "stressed_scenario_ineligible": true,
+    "review_warning_visible": true,
+    "eligibility_explanation": true,
+    "dashboard_exceptions": 0
+  },
+  "inference_parity": [
+    {
+      "segment": "NTC",
+      "parity": true
+    },
+    {
+      "segment": "NTB",
+      "parity": true
+    },
+    {
+      "segment": "Existing-to-Credit",
+      "parity": true
+    }
+  ],
+  "known_dependency_warnings": [
+    "joblib NumPy 2.5 deprecation",
+    "Starlette httpx TestClient deprecation",
+    "SHAP matplotlib color-map deprecations"
+  ],
+  "downloads": {
+    "json_payload_parseable": true,
+    "html_payload_created": true,
+    "two_streamlit_controls_present": true,
+    "browser_download_event": "Not confirmed: browser connection stopped during event capture."
+  },
+  "screenshots": [
+    "reports/dashboard_portfolio.png",
+    "reports/dashboard_health_card.png",
+    "reports/dashboard_explanation.png"
+  ],
+  "clean_package": {
+    "source_dataset_present": false,
+    "tests_passed": 16,
+    "demo_runs_without_supplied_data": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "warm_scoring_p50_ms": 18.90649950291845,
+  "warm_scoring_p95_ms": 19.20373959837889,
+  "explanation_cases": [
+    {
+      "segment": "NTC",
+      "explanation_seconds": 0.4752890829986427,
+      "health_reconstruction_error": 2.842170943040401e-14
+    },
+    {
+      "segment": "NTB",
+      "explanation_seconds": 0.056113082995580044,
+      "health_reconstruction_error": 0.0
+    },
+    {
+      "segment": "Existing-to-Credit",
+      "explanation_seconds": 0.055433374996937346,
+      "health_reconstruction_error": 0.0
+    }
+  ],
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "python": "3.14.6"
+}

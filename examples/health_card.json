@@ -1,0 +1,1420 @@
+{
+  "MSME_ID": "DEMO_NTC_RETAIL",
+  "created_at": "2026-09-12T08:29:33.786192+00:00",
+  "model_version": "msme-v1-6a456ac341",
+  "scores": {
+    "Business_Stability_Score": 70.78,
+    "Cashflow_Score": 79.19,
+    "Revenue_Consistency_Score": 73.79,
+    "Payment_Behaviour_Score": 88.67,
+    "Business_Growth_Score": 45.49,
+    "Compliance_Score": 92.58,
+    "Financial_Health_Score": 81.7
+  },
+  "credit": {
+    "eligible": true,
+    "eligibility_probability": 0.9999806965690053,
+    "risk_category": "Low",
+    "risk_probabilities": {
+      "High": 7.444126567736492e-07,
+      "Low": 0.9647268572581987,
+      "Medium": 0.03527239832914459
+    },
+    "recommended_limit_inr": 1168825,
+    "status": "Indicative recommendation"
+  },
+  "anomaly": {
+    "score": 0.38732430855442357,
+    "threshold": 0.5285064176236266,
+    "flagged": false
+  },
+  "risk_indicators": [],
+  "data_quality_notes": [
+    "EMI payment history: not applicable; no existing loan."
+  ],
+  "recommendations": [
+    "Maintain filing discipline, payment timeliness, and regular cash-flow review."
+  ],
+  "snapshot": {
+    "MSME_ID": "DEMO_NTC_RETAIL",
+    "Customer_Segment": "NTC",
+    "Business_Type": "Proprietorship",
+    "Industry": "Retail",
+    "Location_Category": "Tier 2",
+    "Years_in_Operation": 4.0,
+    "Employee_Count": 4,
+    "Annual_Turnover_INR": 7200000.0,
+    "Monthly_GST_Sales_INR": 600000.0,
+    "Monthly_GST_Purchases_INR": 370000.0,
+    "GST_Filing_Timeliness_Pct": 92.0,
+    "GST_Return_Frequency": "Monthly",
+    "Monthly_UPI_Inflow_INR": 230000.0,
+    "Monthly_UPI_Outflow_INR": 125000.0,
+    "UPI_Avg_Ticket_Size_INR": 850.0,
+    "UPI_Daily_Txn_Count": 9.0,
+    "Transaction_Volatility_Index": 0.22,
+    "Monthly_Bank_Credits_INR": 620000.0,
+    "Monthly_Bank_Debits_INR": 470000.0,
+    "Average_Bank_Balance_INR": 310000.0,
+    "Cashflow_Stability_Index": 0.78,
+    "Has_Existing_Loan": "No",
+    "Monthly_Loan_EMI_INR": 0.0,
+    "EMI_On_Time_Rate_Pct": null,
+    "Overdraft_Usage_Ratio": 0.15,
+    "Monthly_Payroll_INR": 90000.0,
+    "Salary_Consistency_Pct": 94.0,
+    "Employee_Attrition_Rate_Pct": 12.0,
+    "Avg_Invoice_Payment_Delay_Days": 12.0,
+    "Customer_Concentration_Ratio": 0.35,
+    "Vendor_Payment_Timeliness_Pct": 92.0,
+    "Seasonality_Index": 0.25,
+    "Revenue_Growth_Rate_Pct": 15.0,
+    "Credit_History_Months": 0
+  },
+  "disclaimer": "Synthetic-data demonstration. Predictions reproduce supplied labels; they are not validated default probabilities or actual lending decisions. Dated transaction history is unavailable.",
+  "explanations": {
+    "health": {
+      "base_value": 74.66315047611558,
+      "raw_prediction": 81.69967569743446,
+      "reconstructed": 81.69967569743444,
+      "features": [
+        {
+          "feature": "Cashflow_Stability_Index",
+          "contribution": 1.693148293375374,
+          "value": 0.78,
+          "source": "Banking"
+        },
+        {
+          "feature": "GST_Filing_Timeliness_Pct",
+          "contribution": 1.332496967169895,
+          "value": 92.0,
+          "source": "GST"
+        },
+        {
+          "feature": "Vendor_Payment_Timeliness_Pct",
+          "contribution": 1.1352832119935186,
+          "value": 92.0,
+          "source": "Invoices"
+        },
+        {
+          "feature": "Salary_Consistency_Pct",
+          "contribution": 0.9078575500910694,
+          "value": 94.0,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Transaction_Volatility_Index",
+          "contribution": 0.7875460835642978,
+          "value": 0.22,
+          "source": "Business profile"
+        },
+        {
+          "feature": "Overdraft_Usage_Ratio",
+          "contribution": 0.5615149919846426,
+          "value": 0.15,
+          "source": "Credit history"
+        },
+        {
+          "feature": "Customer_Concentration_Ratio",
+          "contribution": 0.3889211640611027,
+          "value": 0.35,
+          "source": "Invoices"
+        },
+        {
+          "feature": "Revenue_Growth_Rate_Pct",
+          "contribution": 0.3406862263766719,
+          "value": 15.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "EMI_On_Time_Rate_Pct",
+          "contribution": -0.1272077181111583,
+          "value": null,
+          "source": "Credit history"
+        },
+        {
+          "feature": "Years_in_Operation",
+          "contribution": -0.10088945954435675,
+          "value": 4.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "Avg_Invoice_Payment_Delay_Days",
+          "contribution": 0.07641662789376068,
+          "value": 12.0,
+          "source": "Invoices"
+        },
+        {
+          "feature": "Bank_Surplus_Margin",
+          "contribution": 0.03615810650183721,
+          "value": 0.24193548387096775,
+          "source": "Banking"
+        },
+        {
+          "feature": "Employee_Count",
+          "contribution": -0.02268678429806026,
+          "value": 4,
+          "source": "Payroll"
+        },
+        {
+          "feature": "EMI_Burden",
+          "contribution": -0.01886950975837994,
+          "value": 0.0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "Location_Category",
+          "contribution": 0.018843124581784953,
+          "value": "Tier 2",
+          "source": "Business profile"
+        },
+        {
+          "feature": "Balance_Coverage",
+          "contribution": 0.014418167020584896,
+          "value": 0.6595744680851063,
+          "source": "Banking"
+        },
+        {
+          "feature": "Average_Bank_Balance_INR",
+          "contribution": -0.012912491372397307,
+          "value": 310000.0,
+          "source": "Banking"
+        },
+        {
+          "feature": "Monthly_Bank_Credits_INR",
+          "contribution": 0.011071697823286628,
+          "value": 620000.0,
+          "source": "Banking"
+        },
+        {
+          "feature": "Employee_Attrition_Rate_Pct",
+          "contribution": 0.010590755123052315,
+          "value": 12.0,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Industry",
+          "contribution": 0.008945721551515858,
+          "value": "Retail",
+          "source": "Business profile"
+        },
+        {
+          "feature": "EMI_Not_Applicable",
+          "contribution": -0.007170505683677504,
+          "value": 1,
+          "source": "Credit history"
+        },
+        {
+          "feature": "GST_Margin",
+          "contribution": -0.006461572506661574,
+          "value": 0.38333333333333336,
+          "source": "GST"
+        },
+        {
+          "feature": "Payroll_Burden",
+          "contribution": 0.006031346357275158,
+          "value": 0.14516129032258066,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Monthly_Payroll_INR",
+          "contribution": 0.005496046087252073,
+          "value": 90000.0,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Monthly_Loan_EMI_INR",
+          "contribution": 0.004699704565369549,
+          "value": 0.0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "Monthly_Bank_Debits_INR",
+          "contribution": -0.0032727552400160067,
+          "value": 470000.0,
+          "source": "Banking"
+        },
+        {
+          "feature": "Seasonality_Index",
+          "contribution": -0.0032429829796093517,
+          "value": 0.25,
+          "source": "Business profile"
+        },
+        {
+          "feature": "Monthly_UPI_Inflow_INR",
+          "contribution": -0.0031511795384762398,
+          "value": 230000.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Credit_History_Months",
+          "contribution": 0.0031319290212752605,
+          "value": 0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "Monthly_UPI_Outflow_INR",
+          "contribution": -0.0030844443929037174,
+          "value": 125000.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Monthly_GST_Purchases_INR",
+          "contribution": -0.0024432065570199526,
+          "value": 370000.0,
+          "source": "GST"
+        },
+        {
+          "feature": "UPI_Net_INR",
+          "contribution": 0.002229387491480535,
+          "value": 105000.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Bank_Surplus_INR",
+          "contribution": 0.0016239293311483165,
+          "value": 150000.0,
+          "source": "Banking"
+        },
+        {
+          "feature": "GST_Bank_Alignment",
+          "contribution": 0.0013172940859546708,
+          "value": 0.967741935483871,
+          "source": "GST"
+        },
+        {
+          "feature": "UPI_Avg_Ticket_Size_INR",
+          "contribution": 0.001106560546524543,
+          "value": 850.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Customer_Segment",
+          "contribution": -0.000842872339341632,
+          "value": "NTC",
+          "source": "Business profile"
+        },
+        {
+          "feature": "GST_Return_Frequency",
+          "contribution": -0.0005223350400442453,
+          "value": "Monthly",
+          "source": "GST"
+        },
+        {
+          "feature": "UPI_Daily_Txn_Count",
+          "contribution": -0.000249612579758014,
+          "value": 9.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Business_Type",
+          "contribution": -2.235337945081378e-06,
+          "value": "Proprietorship",
+          "source": "Business profile"
+        },
+        {
+          "feature": "Has_Existing_Loan",
+          "contribution": 0.0,
+          "value": "No",
+          "source": "Credit history"
+        }
+      ],
+      "source_contributions": {
+        "Banking": 1.740234947439818,
+        "GST": 1.3243871471521238,
+        "Invoices": 1.600621003948382,
+        "Payroll": 0.9072889133605887,
+        "Business profile": 1.0510436058730175,
+        "Credit history": 0.4160988920180717,
+        "UPI": -0.003149288473132893
+      },
+      "value_units": "source values",
+      "note": "Contributions explain model behavior, not causality. Correlated inputs may share attribution.",
+      "output_units": "score points"
+    },
+    "eligibility": {
+      "base_value": 3.8987791254637916,
+      "raw_prediction": 10.855208402492783,
+      "reconstructed": 10.855208402492782,
+      "features": [
+        {
+          "feature": "numeric__Overdraft_Usage_Ratio",
+          "contribution": 1.4677859248918854,
+          "value": -1.1037243321974366,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__Cashflow_Stability_Index",
+          "contribution": 1.1936874494190837,
+          "value": 1.0808728294249041,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__GST_Filing_Timeliness_Pct",
+          "contribution": 1.1315986990955116,
+          "value": 1.0490777840868784,
+          "source": "GST"
+        },
+        {
+          "feature": "numeric__Salary_Consistency_Pct",
+          "contribution": 0.909156640138386,
+          "value": 1.39781942918759,
+          "source": "Payroll"
+        },
+        {
+          "feature": "numeric__Transaction_Volatility_Index",
+          "contribution": 0.8615788285363044,
+          "value": -0.6191454986633725,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Vendor_Payment_Timeliness_Pct",
+          "contribution": 0.7896170941809111,
+          "value": 1.2354048794685275,
+          "source": "Invoices"
+        },
+        {
+          "feature": "numeric__Revenue_Growth_Rate_Pct",
+          "contribution": 0.3256815431843017,
+          "value": 0.34214966063343744,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Customer_Concentration_Ratio",
+          "contribution": 0.3135106608513617,
+          "value": -0.3527957728254825,
+          "source": "Invoices"
+        },
+        {
+          "feature": "category__Has_Existing_Loan_No",
+          "contribution": 0.2856915555800973,
+          "value": 1.0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__Avg_Invoice_Payment_Delay_Days",
+          "contribution": 0.28320120304161245,
+          "value": -0.23925350100473863,
+          "source": "Invoices"
+        },
+        {
+          "feature": "category__Customer_Segment_NTC",
+          "contribution": 0.22612064713344066,
+          "value": 1.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Location_Category_Tier 2",
+          "contribution": 0.19928461582789184,
+          "value": 1.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Has_Existing_Loan_Yes",
+          "contribution": -0.1839812084939636,
+          "value": 0.0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "category__Business_Type_Proprietorship",
+          "contribution": 0.16129233596169926,
+          "value": 1.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Years_in_Operation",
+          "contribution": -0.15980591261028382,
+          "value": -0.31246699830393754,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Customer_Segment_Existing-to-Credit",
+          "contribution": -0.15006795685154883,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__GST_Return_Frequency_Quarterly",
+          "contribution": -0.12659689884330547,
+          "value": 0.0,
+          "source": "GST"
+        },
+        {
+          "feature": "category__Customer_Segment_NTB",
+          "contribution": -0.12454937328627526,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__GST_Return_Frequency_Monthly",
+          "contribution": 0.11714905647787643,
+          "value": 1.0,
+          "source": "GST"
+        },
+        {
+          "feature": "numeric__EMI_Not_Applicable",
+          "contribution": -0.08738080705093912,
+          "value": 0.7328780476739678,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__missingindicator_EMI_On_Time_Rate_Pct",
+          "contribution": -0.08738080705093912,
+          "value": 0.7328780476739678,
+          "source": "Credit history"
+        },
+        {
+          "feature": "category__Business_Type_Private Limited",
+          "contribution": -0.07351587427136834,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Industry_Retail",
+          "contribution": 0.06440599482957735,
+          "value": 1.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Location_Category_Tier 3",
+          "contribution": -0.06404112415152563,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Business_Type_Partnership",
+          "contribution": -0.05937722962095287,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Average_Bank_Balance_INR",
+          "contribution": 0.057933283566532344,
+          "value": 0.41305372816053615,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__Employee_Count",
+          "contribution": 0.05702887434467185,
+          "value": 0.40180651754472996,
+          "source": "Payroll"
+        },
+        {
+          "feature": "numeric__Monthly_GST_Purchases_INR",
+          "contribution": -0.055954388129473565,
+          "value": 0.37460804442825885,
+          "source": "GST"
+        },
+        {
+          "feature": "category__Location_Category_Tier 1",
+          "contribution": -0.05556882502197916,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Location_Category_Metro",
+          "contribution": -0.0428505295270217,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_Bank_Credits_INR",
+          "contribution": -0.04052923165777785,
+          "value": 0.38567885276105496,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__UPI_Avg_Ticket_Size_INR",
+          "contribution": 0.03615110667626006,
+          "value": 0.4239945801078527,
+          "source": "UPI"
+        },
+        {
+          "feature": "category__Business_Type_LLP",
+          "contribution": -0.03355272013654307,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_Bank_Debits_INR",
+          "contribution": -0.032149535050454224,
+          "value": 0.34507336632117436,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__Bank_Surplus_Margin",
+          "contribution": -0.027343700495482452,
+          "value": 0.39635590106633534,
+          "source": "Banking"
+        },
+        {
+          "feature": "category__Location_Category_Rural",
+          "contribution": -0.025644192069049002,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Industry_Trading",
+          "contribution": -0.022334481800791395,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_Loan_EMI_INR",
+          "contribution": 0.020252977564109105,
+          "value": -0.7259621030043556,
+          "source": "Credit history"
+        },
+        {
+          "feature": "category__Industry_Manufacturing",
+          "contribution": -0.018444479413039866,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_Payroll_INR",
+          "contribution": -0.01838062962914196,
+          "value": 0.4863928079981016,
+          "source": "Payroll"
+        },
+        {
+          "feature": "category__Industry_Construction",
+          "contribution": -0.017145964123531074,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Industry_Logistics",
+          "contribution": -0.016795477437015857,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Payroll_Burden",
+          "contribution": 0.011539637803681101,
+          "value": -0.2453574727972072,
+          "source": "Payroll"
+        },
+        {
+          "feature": "category__Industry_Textiles",
+          "contribution": -0.009723528728712712,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Industry_IT & Digital",
+          "contribution": -0.008756765317766096,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__EMI_Burden",
+          "contribution": -0.008634113666012837,
+          "value": -0.6126678490622164,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__Seasonality_Index",
+          "contribution": -0.006822180772842749,
+          "value": -0.6003398103083813,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Employee_Attrition_Rate_Pct",
+          "contribution": 0.005934504268045749,
+          "value": -0.527363876060678,
+          "source": "Payroll"
+        },
+        {
+          "feature": "category__Industry_Healthcare",
+          "contribution": -0.005420546896882538,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__GST_Margin",
+          "contribution": -0.004190576170853221,
+          "value": 0.10273093397510634,
+          "source": "GST"
+        },
+        {
+          "feature": "numeric__GST_Bank_Alignment",
+          "contribution": 0.0030602905506064188,
+          "value": -0.10739762963672608,
+          "source": "GST"
+        },
+        {
+          "feature": "numeric__Monthly_UPI_Outflow_INR",
+          "contribution": -0.003040401090688637,
+          "value": 0.4690403369483748,
+          "source": "UPI"
+        },
+        {
+          "feature": "numeric__Credit_History_Months",
+          "contribution": -0.003037799841461002,
+          "value": -0.5294806242088046,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__Monthly_UPI_Inflow_INR",
+          "contribution": 0.00263429474452896,
+          "value": 0.5076380116039255,
+          "source": "UPI"
+        },
+        {
+          "feature": "category__Industry_Food & Beverage",
+          "contribution": 0.0022227213218980932,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__UPI_Daily_Txn_Count",
+          "contribution": 0.001838821486376309,
+          "value": 0.03947168045477274,
+          "source": "UPI"
+        },
+        {
+          "feature": "category__Industry_Services",
+          "contribution": 0.000618711578907285,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__UPI_Net_INR",
+          "contribution": 0.0002901611772636399,
+          "value": 0.012396499620429042,
+          "source": "UPI"
+        },
+        {
+          "feature": "numeric__Bank_Surplus_INR",
+          "contribution": 0.0002842469341451423,
+          "value": 0.0067794852558238795,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__Balance_Coverage",
+          "contribution": -0.00010534493035245953,
+          "value": -0.06888949935884653,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__EMI_On_Time_Rate_Pct",
+          "contribution": -5.481635486169302e-17,
+          "value": 0.0,
+          "source": "Credit history"
+        }
+      ],
+      "source_contributions": {
+        "Credit history": 1.403315721932776,
+        "Banking": 1.151777167785694,
+        "GST": 1.0650661829803623,
+        "Payroll": 0.9652790269256427,
+        "Business profile": 0.9467882363368906,
+        "Invoices": 1.3863289580738853,
+        "UPI": 0.037873982993740334
+      },
+      "value_units": "transformed model inputs",
+      "note": "Contributions explain model behavior, not causality. Correlated inputs may share attribution.",
+      "output_units": "log odds of eligibility"
+    },
+    "risk": {
+      "base_value": -0.825477705266262,
+      "raw_prediction": 5.794501437742436,
+      "reconstructed": 5.794501437742439,
+      "features": [
+        {
+          "feature": "numeric__Overdraft_Usage_Ratio",
+          "contribution": 1.3128962957288801,
+          "value": -1.1037243321974366,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__Cashflow_Stability_Index",
+          "contribution": 1.1360858388350648,
+          "value": 1.0808728294249041,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__GST_Filing_Timeliness_Pct",
+          "contribution": 1.0695735680202685,
+          "value": 1.0490777840868784,
+          "source": "GST"
+        },
+        {
+          "feature": "numeric__Salary_Consistency_Pct",
+          "contribution": 0.8092158940912848,
+          "value": 1.39781942918759,
+          "source": "Payroll"
+        },
+        {
+          "feature": "numeric__Transaction_Volatility_Index",
+          "contribution": 0.8060912783250284,
+          "value": -0.6191454986633725,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Vendor_Payment_Timeliness_Pct",
+          "contribution": 0.7039849125462957,
+          "value": 1.2354048794685275,
+          "source": "Invoices"
+        },
+        {
+          "feature": "numeric__Revenue_Growth_Rate_Pct",
+          "contribution": 0.3048044864113012,
+          "value": 0.34214966063343744,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Customer_Concentration_Ratio",
+          "contribution": 0.2984159687999038,
+          "value": -0.3527957728254825,
+          "source": "Invoices"
+        },
+        {
+          "feature": "numeric__Avg_Invoice_Payment_Delay_Days",
+          "contribution": 0.2658350489569757,
+          "value": -0.23925350100473863,
+          "source": "Invoices"
+        },
+        {
+          "feature": "numeric__Years_in_Operation",
+          "contribution": -0.149407572519524,
+          "value": -0.31246699830393754,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Has_Existing_Loan_No",
+          "contribution": -0.06699684193730573,
+          "value": 1.0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "category__Customer_Segment_NTC",
+          "contribution": -0.06500207344955981,
+          "value": 1.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Industry_Retail",
+          "contribution": 0.04873667568319301,
+          "value": 1.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Business_Type_Proprietorship",
+          "contribution": -0.04580061111684367,
+          "value": 1.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Bank_Surplus_Margin",
+          "contribution": 0.03144653931419684,
+          "value": 0.39635590106633534,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__Monthly_UPI_Outflow_INR",
+          "contribution": -0.03045997481603596,
+          "value": 0.4690403369483748,
+          "source": "UPI"
+        },
+        {
+          "feature": "category__Has_Existing_Loan_Yes",
+          "contribution": 0.02976722594137441,
+          "value": 0.0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__Average_Bank_Balance_INR",
+          "contribution": -0.029212418669777085,
+          "value": 0.41305372816053615,
+          "source": "Banking"
+        },
+        {
+          "feature": "category__GST_Return_Frequency_Monthly",
+          "contribution": -0.026344887124394912,
+          "value": 1.0,
+          "source": "GST"
+        },
+        {
+          "feature": "category__Business_Type_Private Limited",
+          "contribution": 0.024541993823662712,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Customer_Segment_NTB",
+          "contribution": 0.024252125757594608,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__GST_Return_Frequency_Quarterly",
+          "contribution": 0.023872736655325646,
+          "value": 0.0,
+          "source": "GST"
+        },
+        {
+          "feature": "category__Customer_Segment_Existing-to-Credit",
+          "contribution": 0.023342399115386055,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_Loan_EMI_INR",
+          "contribution": -0.019401405792527297,
+          "value": -0.7259621030043556,
+          "source": "Credit history"
+        },
+        {
+          "feature": "category__Industry_Services",
+          "contribution": 0.018669567599016664,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Location_Category_Tier 3",
+          "contribution": 0.018013306251741756,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__EMI_Not_Applicable",
+          "contribution": -0.017793231390607615,
+          "value": 0.7328780476739678,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__missingindicator_EMI_On_Time_Rate_Pct",
+          "contribution": -0.017793231390607615,
+          "value": 0.7328780476739678,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__UPI_Avg_Ticket_Size_INR",
+          "contribution": 0.01751412711411502,
+          "value": 0.4239945801078527,
+          "source": "UPI"
+        },
+        {
+          "feature": "numeric__Monthly_Bank_Credits_INR",
+          "contribution": 0.016035329278937457,
+          "value": 0.38567885276105496,
+          "source": "Banking"
+        },
+        {
+          "feature": "category__Location_Category_Metro",
+          "contribution": 0.015766313424416374,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Industry_Manufacturing",
+          "contribution": 0.015734823761524647,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Location_Category_Tier 2",
+          "contribution": 0.013960468466943361,
+          "value": 1.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_Payroll_INR",
+          "contribution": 0.013602544641048448,
+          "value": 0.4863928079981016,
+          "source": "Payroll"
+        },
+        {
+          "feature": "category__Location_Category_Tier 1",
+          "contribution": 0.012732045068726636,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_Bank_Debits_INR",
+          "contribution": 0.011947081276286584,
+          "value": 0.34507336632117436,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__Seasonality_Index",
+          "contribution": 0.011144769722459844,
+          "value": -0.6003398103083813,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Business_Type_Partnership",
+          "contribution": 0.010966752010511217,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_UPI_Inflow_INR",
+          "contribution": -0.010119990731624609,
+          "value": 0.5076380116039255,
+          "source": "UPI"
+        },
+        {
+          "feature": "category__Industry_Trading",
+          "contribution": -0.007656504168973042,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Industry_Textiles",
+          "contribution": 0.006900772890543612,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Employee_Count",
+          "contribution": -0.006666535912624467,
+          "value": 0.40180651754472996,
+          "source": "Payroll"
+        },
+        {
+          "feature": "category__Location_Category_Rural",
+          "contribution": 0.006320038311022094,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Monthly_GST_Purchases_INR",
+          "contribution": 0.0039445553575804555,
+          "value": 0.37460804442825885,
+          "source": "GST"
+        },
+        {
+          "feature": "category__Industry_Food & Beverage",
+          "contribution": -0.003769690151605134,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Credit_History_Months",
+          "contribution": 0.0027338916579523758,
+          "value": -0.5294806242088046,
+          "source": "Credit history"
+        },
+        {
+          "feature": "category__Industry_Healthcare",
+          "contribution": 0.0024998225511845638,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Balance_Coverage",
+          "contribution": 0.0022977337464712695,
+          "value": -0.06888949935884653,
+          "source": "Banking"
+        },
+        {
+          "feature": "category__Business_Type_LLP",
+          "contribution": 0.0021258291091979225,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__GST_Margin",
+          "contribution": -0.0019942951757677225,
+          "value": 0.10273093397510634,
+          "source": "GST"
+        },
+        {
+          "feature": "category__Industry_Construction",
+          "contribution": 0.00169366716568244,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__EMI_Burden",
+          "contribution": -0.001377660672805994,
+          "value": -0.6126678490622164,
+          "source": "Credit history"
+        },
+        {
+          "feature": "numeric__GST_Bank_Alignment",
+          "contribution": 0.0008784454286253483,
+          "value": -0.10739762963672608,
+          "source": "GST"
+        },
+        {
+          "feature": "category__Industry_Logistics",
+          "contribution": 0.0006102806419740211,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "category__Industry_IT & Digital",
+          "contribution": 0.0003525601594743551,
+          "value": 0.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "numeric__Payroll_Burden",
+          "contribution": 0.0002605597500269024,
+          "value": -0.2453574727972072,
+          "source": "Payroll"
+        },
+        {
+          "feature": "numeric__UPI_Net_INR",
+          "contribution": 0.00014085243267439586,
+          "value": 0.012396499620429042,
+          "source": "UPI"
+        },
+        {
+          "feature": "numeric__Bank_Surplus_INR",
+          "contribution": 0.00010028317733292531,
+          "value": 0.0067794852558238795,
+          "source": "Banking"
+        },
+        {
+          "feature": "numeric__UPI_Daily_Txn_Count",
+          "contribution": -2.6246641542641394e-05,
+          "value": 0.03947168045477274,
+          "source": "UPI"
+        },
+        {
+          "feature": "numeric__Employee_Attrition_Rate_Pct",
+          "contribution": -7.0943303802048546e-06,
+          "value": -0.527363876060678,
+          "source": "Payroll"
+        },
+        {
+          "feature": "numeric__EMI_On_Time_Rate_Pct",
+          "contribution": -1.1978271482597092e-16,
+          "value": 0.0,
+          "source": "Credit history"
+        }
+      ],
+      "source_contributions": {
+        "Credit history": 1.2220350421443527,
+        "Banking": 1.1687003869585129,
+        "GST": 1.0699301231616374,
+        "Payroll": 0.8164053682393556,
+        "Business profile": 1.0976235248440798,
+        "Invoices": 1.2682359303031752,
+        "UPI": -0.02295123264241379
+      },
+      "value_units": "transformed model inputs",
+      "note": "Contributions explain model behavior, not causality. Correlated inputs may share attribution.",
+      "output_units": "raw class margin"
+    },
+    "positive_limit": {
+      "base_value": 13.24456948550059,
+      "raw_prediction": 13.971510234537616,
+      "reconstructed": 13.971510234537616,
+      "features": [
+        {
+          "feature": "Annual_Turnover_INR",
+          "contribution": 0.21905883290495687,
+          "value": 7200000.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "Cashflow_Stability_Index",
+          "contribution": 0.1444483702735752,
+          "value": 0.78,
+          "source": "Banking"
+        },
+        {
+          "feature": "Overdraft_Usage_Ratio",
+          "contribution": 0.06425179378730558,
+          "value": 0.15,
+          "source": "Credit history"
+        },
+        {
+          "feature": "GST_Filing_Timeliness_Pct",
+          "contribution": 0.05547657397645923,
+          "value": 92.0,
+          "source": "GST"
+        },
+        {
+          "feature": "Monthly_GST_Sales_INR",
+          "contribution": 0.05196851679384876,
+          "value": 600000.0,
+          "source": "GST"
+        },
+        {
+          "feature": "Salary_Consistency_Pct",
+          "contribution": 0.04073539774001176,
+          "value": 94.0,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Vendor_Payment_Timeliness_Pct",
+          "contribution": 0.0391648203836813,
+          "value": 92.0,
+          "source": "Invoices"
+        },
+        {
+          "feature": "Monthly_GST_Purchases_INR",
+          "contribution": 0.03858457623698598,
+          "value": 370000.0,
+          "source": "GST"
+        },
+        {
+          "feature": "UPI_Net_INR",
+          "contribution": 0.0346394188926349,
+          "value": 105000.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Transaction_Volatility_Index",
+          "contribution": 0.028866966079634574,
+          "value": 0.22,
+          "source": "Business profile"
+        },
+        {
+          "feature": "Monthly_Bank_Credits_INR",
+          "contribution": -0.025108992235324635,
+          "value": 620000.0,
+          "source": "Banking"
+        },
+        {
+          "feature": "Customer_Concentration_Ratio",
+          "contribution": 0.022789516154544064,
+          "value": 0.35,
+          "source": "Invoices"
+        },
+        {
+          "feature": "Revenue_Growth_Rate_Pct",
+          "contribution": 0.014408712942967966,
+          "value": 15.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "Monthly_Bank_Debits_INR",
+          "contribution": 0.013095800404262664,
+          "value": 470000.0,
+          "source": "Banking"
+        },
+        {
+          "feature": "Bank_Surplus_INR",
+          "contribution": -0.011979577374672536,
+          "value": 150000.0,
+          "source": "Banking"
+        },
+        {
+          "feature": "Avg_Invoice_Payment_Delay_Days",
+          "contribution": 0.007265054366492638,
+          "value": 12.0,
+          "source": "Invoices"
+        },
+        {
+          "feature": "Years_in_Operation",
+          "contribution": -0.006949990784524157,
+          "value": 4.0,
+          "source": "Business profile"
+        },
+        {
+          "feature": "EMI_On_Time_Rate_Pct",
+          "contribution": -0.004537448275458229,
+          "value": null,
+          "source": "Credit history"
+        },
+        {
+          "feature": "Monthly_Payroll_INR",
+          "contribution": 0.0025790216201450004,
+          "value": 90000.0,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Location_Category",
+          "contribution": 0.0022166116427064383,
+          "value": "Tier 2",
+          "source": "Business profile"
+        },
+        {
+          "feature": "GST_Margin",
+          "contribution": -0.0021817560099276294,
+          "value": 0.38333333333333336,
+          "source": "GST"
+        },
+        {
+          "feature": "GST_Bank_Alignment",
+          "contribution": 0.001966210013022954,
+          "value": 0.967741935483871,
+          "source": "GST"
+        },
+        {
+          "feature": "Monthly_UPI_Inflow_INR",
+          "contribution": -0.0018348401444083068,
+          "value": 230000.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Monthly_Loan_EMI_INR",
+          "contribution": -0.001292425041663838,
+          "value": 0.0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "Payroll_Burden",
+          "contribution": 0.0010663031906691337,
+          "value": 0.14516129032258066,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Seasonality_Index",
+          "contribution": 0.0010646815588380163,
+          "value": 0.25,
+          "source": "Business profile"
+        },
+        {
+          "feature": "Employee_Count",
+          "contribution": -0.0009426998344982932,
+          "value": 4,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Average_Bank_Balance_INR",
+          "contribution": 0.0007316570132331746,
+          "value": 310000.0,
+          "source": "Banking"
+        },
+        {
+          "feature": "Credit_History_Months",
+          "contribution": -0.0006460443704044138,
+          "value": 0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "UPI_Avg_Ticket_Size_INR",
+          "contribution": -0.000643115238620057,
+          "value": 850.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Bank_Surplus_Margin",
+          "contribution": 0.0004977805141300113,
+          "value": 0.24193548387096775,
+          "source": "Banking"
+        },
+        {
+          "feature": "Customer_Segment",
+          "contribution": -0.0004195265393061927,
+          "value": "NTC",
+          "source": "Business profile"
+        },
+        {
+          "feature": "Industry",
+          "contribution": -0.0004098565596689803,
+          "value": "Retail",
+          "source": "Business profile"
+        },
+        {
+          "feature": "Monthly_UPI_Outflow_INR",
+          "contribution": -0.00035207800782284646,
+          "value": 125000.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Employee_Attrition_Rate_Pct",
+          "contribution": -0.0003155351140637141,
+          "value": 12.0,
+          "source": "Payroll"
+        },
+        {
+          "feature": "Business_Type",
+          "contribution": -0.00015256022564126985,
+          "value": "Proprietorship",
+          "source": "Business profile"
+        },
+        {
+          "feature": "GST_Return_Frequency",
+          "contribution": -0.00014133117782941663,
+          "value": "Monthly",
+          "source": "GST"
+        },
+        {
+          "feature": "Has_Existing_Loan",
+          "contribution": -0.00012016355645184769,
+          "value": "No",
+          "source": "Credit history"
+        },
+        {
+          "feature": "UPI_Daily_Txn_Count",
+          "contribution": 0.00011069615905736777,
+          "value": 9.0,
+          "source": "UPI"
+        },
+        {
+          "feature": "Balance_Coverage",
+          "contribution": -0.00010410749151355427,
+          "value": 0.6595744680851063,
+          "source": "Banking"
+        },
+        {
+          "feature": "EMI_Burden",
+          "contribution": 8.548436966308485e-05,
+          "value": 0.0,
+          "source": "Credit history"
+        },
+        {
+          "feature": "EMI_Not_Applicable",
+          "contribution": 0.0,
+          "value": 1,
+          "source": "Credit history"
+        }
+      ],
+      "source_contributions": {
+        "Business profile": 0.25768387101996326,
+        "Banking": 0.12158093110369032,
+        "Credit history": 0.05774119691299034,
+        "GST": 0.1456727898325599,
+        "Payroll": 0.04312248760226388,
+        "Invoices": 0.069219390904718,
+        "UPI": 0.03192008166084106
+      },
+      "value_units": "source values",
+      "note": "Contributions explain model behavior, not causality. Correlated inputs may share attribution.",
+      "output_units": "log1p INR before eligibility gate"
+    }
+  },
+  "strengths": [
+    {
+      "feature": "Cashflow_Stability_Index",
+      "contribution": 1.693148293375374,
+      "value": 0.78,
+      "source": "Banking"
+    },
+    {
+      "feature": "GST_Filing_Timeliness_Pct",
+      "contribution": 1.332496967169895,
+      "value": 92.0,
+      "source": "GST"
+    },
+    {
+      "feature": "Vendor_Payment_Timeliness_Pct",
+      "contribution": 1.1352832119935186,
+      "value": 92.0,
+      "source": "Invoices"
+    }
+  ],
+  "concerns": [
+    {
+      "feature": "EMI_On_Time_Rate_Pct",
+      "contribution": -0.1272077181111583,
+      "value": null,
+      "source": "Credit history"
+    },
+    {
+      "feature": "Years_in_Operation",
+      "contribution": -0.10088945954435675,
+      "value": 4.0,
+      "source": "Business profile"
+    },
+    {
+      "feature": "Employee_Count",
+      "contribution": -0.02268678429806026,
+      "value": 4,
+      "source": "Payroll"
+    }
+  ],
+  "assessment_id": "e9eeb8bd-2887-41ac-8a13-9b3a89492aba",
+  "snapshot_id": 1,
+  "newer_snapshot_available": false
+}

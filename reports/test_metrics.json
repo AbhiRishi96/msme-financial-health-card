@@ -1,0 +1,44 @@
+{
+  "eligibility_macro_f1": 0.9022484160713002,
+  "eligibility_roc_auc": 0.9789406646568904,
+  "eligibility_pr_auc": 0.9927420905768594,
+  "risk_macro_f1": 0.837702881481364,
+  "eligibility_confusion_matrix": [
+    [
+      1662,
+      264
+    ],
+    [
+      299,
+      5275
+    ]
+  ],
+  "risk_labels": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "risk_confusion_matrix": [
+    [
+      1635,
+      0,
+      289
+    ],
+    [
+      0,
+      1854,
+      378
+    ],
+    [
+      269,
+      312,
+      2763
+    ]
+  ],
+  "positive_limit_mae_inr": 143697.08070402942,
+  "positive_limit_log_rmse": 0.1802406041826979,
+  "complete_limit_mae_inr": 149943.6232630607,
+  "anomaly_review_rate": 0.0212,
+  "test_rows": 7500,
+  "eligibility_threshold": 0.54
+}

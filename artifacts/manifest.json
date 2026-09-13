@@ -1,0 +1,118 @@
+{
+  "version": "msme-v1-6a456ac341",
+  "dataset_sha256": "6a456ac34188b5e13acfd302926796bf5b9132afa889a96b3eecb7d45a37aeb9",
+  "split": {
+    "train": 35000,
+    "validation": 7500,
+    "test": 7500,
+    "seed": 42,
+    "stratify": "Customer_Segment + Credit_Risk_Category"
+  },
+  "selected": {
+    "scores": {
+      "family": "catboost",
+      "features": "compact",
+      "validation": {
+        "task": "scores",
+        "family": "catboost",
+        "features": "compact",
+        "metric": 0.4801314898914534,
+        "per_score": [
+          0.25001340999294525,
+          0.2768646074334754,
+          0.25606202465323047,
+          0.23371676435421598,
+          0.32995355174729446,
+          0.2365107294537227,
+          1.7777993416052893
+        ]
+      }
+    },
+    "eligibility": {
+      "family": "linear",
+      "features": "compact",
+      "validation": {
+        "task": "eligibility",
+        "family": "linear",
+        "features": "compact",
+        "metric": 0.904264835631658
+      }
+    },
+    "risk": {
+      "family": "linear",
+      "features": "compact",
+      "validation": {
+        "task": "risk",
+        "family": "linear",
+        "features": "compact",
+        "metric": 0.8389348177134915
+      }
+    },
+    "limit": {
+      "family": "catboost",
+      "features": "full",
+      "validation": {
+        "task": "limit",
+        "family": "catboost",
+        "features": "full",
+        "metric": 141422.84081330957
+      }
+    }
+  },
+  "input_columns": [
+    "Customer_Segment",
+    "Business_Type",
+    "Industry",
+    "Location_Category",
+    "Years_in_Operation",
+    "Employee_Count",
+    "Annual_Turnover_INR",
+    "Monthly_GST_Sales_INR",
+    "Monthly_GST_Purchases_INR",
+    "GST_Filing_Timeliness_Pct",
+    "GST_Return_Frequency",
+    "Monthly_UPI_Inflow_INR",
+    "Monthly_UPI_Outflow_INR",
+    "UPI_Avg_Ticket_Size_INR",
+    "UPI_Daily_Txn_Count",
+    "Transaction_Volatility_Index",
+    "Monthly_Bank_Credits_INR",
+    "Monthly_Bank_Debits_INR",
+    "Average_Bank_Balance_INR",
+    "Cashflow_Stability_Index",
+    "Has_Existing_Loan",
+    "Monthly_Loan_EMI_INR",
+    "EMI_On_Time_Rate_Pct",
+    "Overdraft_Usage_Ratio",
+    "Monthly_Payroll_INR",
+    "Salary_Consistency_Pct",
+    "Employee_Attrition_Rate_Pct",
+    "Avg_Invoice_Payment_Delay_Days",
+    "Customer_Concentration_Ratio",
+    "Vendor_Payment_Timeliness_Pct",
+    "Seasonality_Index",
+    "Revenue_Growth_Rate_Pct",
+    "Credit_History_Months"
+  ],
+  "excluded_targets": [
+    "Business_Stability_Score",
+    "Cashflow_Score",
+    "Revenue_Consistency_Score",
+    "Payment_Behaviour_Score",
+    "Business_Growth_Score",
+    "Compliance_Score",
+    "Financial_Health_Score",
+    "Probability_of_Default",
+    "Credit_Risk_Category",
+    "Credit_Eligible",
+    "Recommended_Credit_Limit_INR"
+  ],
+  "limitations": [
+    "Synthetic labels only",
+    "No observed defaults",
+    "No dated histories",
+    "No anomaly labels"
+  ],
+  "feature_bounds_source": "training partition",
+  "anomaly_threshold_source": "98th percentile training anomaly score"
+}

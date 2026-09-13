@@ -1,0 +1,8 @@
+{
+  "initial_load": true,
+  "ntc_filter_count": 2,
+  "stressed_scenario_ineligible": true,
+  "review_warning_visible": true,
+  "eligibility_explanation": true,
+  "dashboard_exceptions": 0
+}

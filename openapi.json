@@ -1,0 +1,662 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "MSME Financial Health Card",
+    "description": "Local synthetic-data demonstration. No real lending decisions or live integrations.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/businesses": {
+      "post": {
+        "summary": "Ingest",
+        "operationId": "ingest_businesses_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Business"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/assess": {
+      "post": {
+        "summary": "Assess Business",
+        "description": "One-step instant scoring: persists snapshot and assessment, returning complete health card immediately.",
+        "operationId": "assess_business_assess_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Business"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/businesses/{business_id}": {
+      "get": {
+        "summary": "Get Business",
+        "operationId": "get_business_businesses__business_id__get",
+        "parameters": [
+          {
+            "name": "business_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Business Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/businesses/{business_id}/assessments": {
+      "post": {
+        "summary": "Generate",
+        "operationId": "generate_businesses__business_id__assessments_post",
+        "parameters": [
+          {
+            "name": "business_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Business Id"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Assessment History",
+        "operationId": "assessment_history_businesses__business_id__assessments_get",
+        "parameters": [
+          {
+            "name": "business_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Business Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/businesses/{business_id}/health-card": {
+      "get": {
+        "summary": "Get Card",
+        "operationId": "get_card_businesses__business_id__health_card_get",
+        "parameters": [
+          {
+            "name": "business_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Business Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/businesses/{business_id}/credit-recommendation": {
+      "get": {
+        "summary": "Credit",
+        "operationId": "credit_businesses__business_id__credit_recommendation_get",
+        "parameters": [
+          {
+            "name": "business_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Business Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/portfolio": {
+      "get": {
+        "summary": "Portfolio",
+        "operationId": "portfolio_portfolio_get",
+        "parameters": [
+          {
+            "name": "segment",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Segment"
+            }
+          },
+          {
+            "name": "industry",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Industry"
+            }
+          },
+          {
+            "name": "risk",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Risk"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Business": {
+        "properties": {
+          "MSME_ID": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Msme Id"
+          },
+          "Customer_Segment": {
+            "type": "string",
+            "enum": [
+              "NTC",
+              "NTB",
+              "Existing-to-Credit"
+            ],
+            "title": "Customer Segment"
+          },
+          "Business_Type": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Business Type"
+          },
+          "Industry": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Industry"
+          },
+          "Location_Category": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Location Category"
+          },
+          "Years_in_Operation": {
+            "type": "number",
+            "maximum": 200.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Years In Operation"
+          },
+          "Employee_Count": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Employee Count"
+          },
+          "Annual_Turnover_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Annual Turnover Inr"
+          },
+          "Monthly_GST_Sales_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Monthly Gst Sales Inr"
+          },
+          "Monthly_GST_Purchases_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Monthly Gst Purchases Inr"
+          },
+          "GST_Filing_Timeliness_Pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Gst Filing Timeliness Pct"
+          },
+          "GST_Return_Frequency": {
+            "type": "string",
+            "enum": [
+              "Monthly",
+              "Quarterly"
+            ],
+            "title": "Gst Return Frequency"
+          },
+          "Monthly_UPI_Inflow_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Monthly Upi Inflow Inr"
+          },
+          "Monthly_UPI_Outflow_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Monthly Upi Outflow Inr"
+          },
+          "UPI_Avg_Ticket_Size_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Upi Avg Ticket Size Inr"
+          },
+          "UPI_Daily_Txn_Count": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Upi Daily Txn Count"
+          },
+          "Transaction_Volatility_Index": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Transaction Volatility Index"
+          },
+          "Monthly_Bank_Credits_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Monthly Bank Credits Inr"
+          },
+          "Monthly_Bank_Debits_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Monthly Bank Debits Inr"
+          },
+          "Average_Bank_Balance_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Average Bank Balance Inr"
+          },
+          "Cashflow_Stability_Index": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Cashflow Stability Index"
+          },
+          "Has_Existing_Loan": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ],
+            "title": "Has Existing Loan"
+          },
+          "Monthly_Loan_EMI_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Monthly Loan Emi Inr"
+          },
+          "EMI_On_Time_Rate_Pct": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Emi On Time Rate Pct"
+          },
+          "Overdraft_Usage_Ratio": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Overdraft Usage Ratio"
+          },
+          "Monthly_Payroll_INR": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Monthly Payroll Inr"
+          },
+          "Salary_Consistency_Pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Salary Consistency Pct"
+          },
+          "Employee_Attrition_Rate_Pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Employee Attrition Rate Pct"
+          },
+          "Avg_Invoice_Payment_Delay_Days": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Avg Invoice Payment Delay Days"
+          },
+          "Customer_Concentration_Ratio": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Customer Concentration Ratio"
+          },
+          "Vendor_Payment_Timeliness_Pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Vendor Payment Timeliness Pct"
+          },
+          "Seasonality_Index": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Seasonality Index"
+          },
+          "Revenue_Growth_Rate_Pct": {
+            "type": "number",
+            "minimum": -100.0,
+            "title": "Revenue Growth Rate Pct"
+          },
+          "Credit_History_Months": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Credit History Months"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "MSME_ID",
+          "Customer_Segment",
+          "Business_Type",
+          "Industry",
+          "Location_Category",
+          "Years_in_Operation",
+          "Employee_Count",
+          "Annual_Turnover_INR",
+          "Monthly_GST_Sales_INR",
+          "Monthly_GST_Purchases_INR",
+          "GST_Filing_Timeliness_Pct",
+          "GST_Return_Frequency",
+          "Monthly_UPI_Inflow_INR",
+          "Monthly_UPI_Outflow_INR",
+          "UPI_Avg_Ticket_Size_INR",
+          "UPI_Daily_Txn_Count",
+          "Transaction_Volatility_Index",
+          "Monthly_Bank_Credits_INR",
+          "Monthly_Bank_Debits_INR",
+          "Average_Bank_Balance_INR",
+          "Cashflow_Stability_Index",
+          "Has_Existing_Loan",
+          "Monthly_Loan_EMI_INR",
+          "EMI_On_Time_Rate_Pct",
+          "Overdraft_Usage_Ratio",
+          "Monthly_Payroll_INR",
+          "Salary_Consistency_Pct",
+          "Employee_Attrition_Rate_Pct",
+          "Avg_Invoice_Payment_Delay_Days",
+          "Customer_Concentration_Ratio",
+          "Vendor_Payment_Timeliness_Pct",
+          "Seasonality_Index",
+          "Revenue_Growth_Rate_Pct",
+          "Credit_History_Months"
+        ],
+        "title": "Business",
+        "description": "One current business snapshot. All source fields required; EMI may be null."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

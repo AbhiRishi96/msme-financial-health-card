@@ -1,0 +1,14 @@
+[
+  {
+    "segment": "NTC",
+    "parity": true
+  },
+  {
+    "segment": "NTB",
+    "parity": true
+  },
+  {
+    "segment": "Existing-to-Credit",
+    "parity": true
+  }
+]
