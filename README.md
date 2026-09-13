@@ -4,7 +4,7 @@ A notebook-first, explainable assessment of synthetic MSME financial data. Seven
 
 **Live demo:** [cars24-msme-financial-health.streamlit.app](https://cars24-msme-financial-health.streamlit.app/)
 
-**Submission report:** [Download the evaluator report](submission/MSME_Financial_Health_Card_Submission_Report.docx)
+The technical submission report is supplied separately as an attachment. This repository contains the implementation, executed notebooks, model artifacts, and evaluation outputs.
 
 **This is an interview demonstration.** Labels are synthetic; there are no observed defaults, dated transaction histories, or anomaly labels. Results do not establish real underwriting accuracy or fairness. No external financial systems are connected.
 
@@ -14,8 +14,8 @@ A notebook-first, explainable assessment of synthetic MSME financial data. Seven
 
 | Evaluation criterion | Weight | Direct evidence |
 |---|---:|---|
-| Problem Understanding | 10% | [Submission report](submission/MSME_Financial_Health_Card_Submission_Report.docx), [production boundary](ARCHITECTURE.md#boundaries) |
-| Data Engineering & Feature Design | 15% | [Executed EDA notebook](data_analysis.ipynb), [shared feature logic](scoring.py), [quality reports](data_quality_reports) |
+| Problem Understanding | 10% | [Data and modeling choices](#data-and-modeling-choices), [production boundary](ARCHITECTURE.md#boundaries) |
+| Data Engineering & Feature Design | 15% | [Executed EDA notebook](data_analysis.ipynb), [shared feature logic](scoring.py), [distribution chart](reports/distributions.png) |
 | AI/ML Model Quality | 20% | [Executed modeling notebook](modeling.ipynb), [test metrics](reports/test_metrics.json), [subgroup metrics](reports/subgroup_metrics.csv) |
 | Explainability & Interpretability | 10% | [Shared SHAP inference](scoring.py), [behavior tests](tests/test_workflow.py), live app **Why this result?** view |
 | Financial Health Card Design | 15% | [Live Health Card](https://cars24-msme-financial-health.streamlit.app/), [printable example](examples/health_card.html) |
@@ -23,7 +23,7 @@ A notebook-first, explainable assessment of synthetic MSME financial data. Seven
 | Scalability & System Architecture | 10% | [Architecture](ARCHITECTURE.md), [workflow image](reports/architecture_workflow.png), [API contract](openapi.json) |
 | Innovation & Practicality | 10% | [Eligibility/limit separation and anomaly review](modeling.ipynb), [versioned REST workflow](API.md) |
 
-The [submission package index](submission/README.md) gives the recommended review order and the exact files to submit.
+Start with the live demo, then review the notebooks, held-out metrics, and architecture using the links above. The accompanying repository ZIP contains the same committed files as GitHub; the technical report is attached separately.
 
 ## Run locally
 
